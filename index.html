@@ -1,0 +1,1882 @@
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ICRAME 2026 - International Conference on Recent Advances in Multidisciplinary Engineering."
+    />
+    <title>ICRAME 2026 | MUIT Lucknow</title>
+
+    <!-- Fonts: Inter and Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Outfit:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: "#020408",
+              surface: "#0B0E14",
+              surfaceHighlight: "#161b26",
+              primary: "#3b82f6",
+              primaryGlow: "#60a5fa",
+              secondary: "#10b981",
+              textMain: "#e2e8f0",
+              textMuted: "#94a3b8",
+              border: "#1e293b",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Outfit", "sans-serif"],
+            },
+            letterSpacing: {
+              tightest: "-0.04em",
+            },
+            backgroundImage: {
+              "grid-white":
+                "linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px)",
+            },
+            animation: {
+              scroll: "scroll 60s linear infinite",
+            },
+            keyframes: {
+              scroll: {
+                "0%": { transform: "translateX(0)" },
+                "100%": { transform: "translateX(-50%)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body class="selection:bg-primary/30 selection:text-white">
+    <!-- Navbar -->
+    <nav
+      id="navbar"
+      class="fixed w-full z-50 border-b border-white/5 backdrop-blur-md transition-all duration-300 top-0"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between"
+      >
+        <a
+          href="#"
+          class="font-display font-semibold text-xl tracking-tightest text-white flex items-center gap-2 relative z-50"
+        >
+          ICRAME
+          <span class="text-primary opacity-80">2026</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            href="#about"
+            class="text-sm font-medium text-textMuted hover:text-white transition-colors"
+          >
+            About
+          </a>
+          <a
+            href="#tracks"
+            class="text-sm font-medium text-textMuted hover:text-white transition-colors"
+          >
+            Tracks
+          </a>
+          <a
+            href="#speakers"
+            class="text-sm font-medium text-textMuted hover:text-white transition-colors"
+          >
+            Speakers
+          </a>
+          <a
+            href="#committee"
+            class="text-sm font-medium text-textMuted hover:text-white transition-colors"
+          >
+            Committee
+          </a>
+          <a
+            href="#venue"
+            class="text-sm font-medium text-textMuted hover:text-white transition-colors"
+          >
+            Venue
+          </a>
+        </div>
+
+        <div class="hidden md:flex items-center gap-4">
+          <a
+            href="#contact"
+            class="text-xs font-medium text-textMuted hover:text-white uppercase tracking-wider"
+          >
+            Contact
+          </a>
+          <a
+            href="#registration"
+            class="bg-white text-black hover:bg-slate-200 text-sm font-medium px-4 py-2 rounded-full transition-colors"
+          >
+            Register
+          </a>
+
+          <!-- Theme Toggle Button (Desktop) -->
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-label="Toggle Theme"
+          >
+            <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+            <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-btn"
+          class="md:hidden text-white relative z-50 p-2 hover:bg-white/10 rounded-lg transition-colors"
+          aria-label="Toggle mobile menu"
+        >
+          <i data-lucide="menu" stroke-width="1.5" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Modal Navigation -->
+      <div id="mobile-menu" class="mobile-menu-overlay">
+        <div class="mobile-menu-container">
+          <!-- Close Button -->
+          <button
+            id="mobile-close-btn"
+            class="absolute top-6 right-6 text-white p-2 hover:bg-white/10 rounded-lg transition-all hover:rotate-90 duration-300"
+            aria-label="Close menu"
+          >
+            <i data-lucide="x" stroke-width="1.5" class="w-6 h-6"></i>
+          </button>
+
+          <!-- Mobile Menu Content -->
+          <div class="mobile-menu-content">
+            <!-- Menu Links -->
+            <nav class="mobile-nav-links">
+              <a href="#about" class="mobile-nav-link" data-mobile-link>
+                <span class="mobile-nav-link-text">About</span>
+                <i
+                  data-lucide="arrow-right"
+                  class="w-5 h-5 mobile-nav-arrow"
+                ></i>
+              </a>
+              <a href="#tracks" class="mobile-nav-link" data-mobile-link>
+                <span class="mobile-nav-link-text">Tracks</span>
+                <i
+                  data-lucide="arrow-right"
+                  class="w-5 h-5 mobile-nav-arrow"
+                ></i>
+              </a>
+              <a href="#speakers" class="mobile-nav-link" data-mobile-link>
+                <span class="mobile-nav-link-text">Speakers</span>
+                <i
+                  data-lucide="arrow-right"
+                  class="w-5 h-5 mobile-nav-arrow"
+                ></i>
+              </a>
+              <a href="#committee" class="mobile-nav-link" data-mobile-link>
+                <span class="mobile-nav-link-text">Committee</span>
+                <i
+                  data-lucide="arrow-right"
+                  class="w-5 h-5 mobile-nav-arrow"
+                ></i>
+              </a>
+              <a href="#venue" class="mobile-nav-link" data-mobile-link>
+                <span class="mobile-nav-link-text">Venue</span>
+                <i
+                  data-lucide="arrow-right"
+                  class="w-5 h-5 mobile-nav-arrow"
+                ></i>
+              </a>
+              <a href="#contact" class="mobile-nav-link" data-mobile-link>
+                <span class="mobile-nav-link-text">Contact</span>
+                <i
+                  data-lucide="arrow-right"
+                  class="w-5 h-5 mobile-nav-arrow"
+                ></i>
+              </a>
+            </nav>
+
+            <!-- Mobile CTA & Theme Toggle -->
+            <div class="mobile-menu-footer">
+              <a href="#registration" class="mobile-cta-btn" data-mobile-link>
+                <span>Register Now</span>
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+              </a>
+
+              <!-- Theme Toggle (Mobile) -->
+              <button
+                id="theme-toggle-mobile"
+                class="mobile-theme-toggle"
+                aria-label="Toggle Theme"
+              >
+                <i data-lucide="sun" class="w-5 h-5"></i>
+                <span class="mobile-theme-text">Toggle Theme</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-grid-white bg-[size:40px_40px] bg-grid-mask opacity-20 pointer-events-none"
+      ></div>
+      <div
+        class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-primary/20 blur-[100px] rounded-full pointer-events-none"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 -ml-20 w-72 h-72 bg-secondary/10 blur-[100px] rounded-full pointer-events-none"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="max-w-4xl">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-medium tracking-wide mb-8 reveal"
+          >
+            <span class="relative flex h-2 w-2">
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex rounded-full h-2 w-2 bg-primary"
+              ></span>
+            </span>
+            March 14–15, 2026 • MUIT Lucknow, India
+          </div>
+
+          <h1
+            class="text-5xl md:text-7xl font-display font-semibold tracking-tightest leading-[1.1] mb-6 text-white reveal delay-100"
+          >
+            Recent Advances in
+            <br />
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-indigo-400"
+            >
+              Multidisciplinary Engineering
+            </span>
+          </h1>
+
+          <p
+            class="text-lg md:text-xl text-textMuted max-w-2xl mb-10 leading-relaxed reveal delay-200"
+          >
+            A global forum exploring the convergence of AI, IoT, Smart Grids,
+            Robotics, and Sustainable Agriculture. Published by Taylor &amp;
+            Francis.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 reveal delay-300">
+            <a
+              href="#registration"
+              class="bg-white text-black px-6 py-3 rounded-full font-medium text-sm hover:bg-slate-200 transition-all flex items-center gap-2 group"
+            >
+              Submit Paper
+              <i
+                data-lucide="arrow-right"
+                class="w-4 h-4 transition-transform group-hover:translate-x-1"
+                stroke-width="1.5"
+              ></i>
+            </a>
+            <a
+              href="#about"
+              class="px-6 py-3 rounded-full border border-border text-textMuted font-medium text-sm hover:text-white hover:border-white/20 transition-all"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-24 pt-8 border-t border-white/5 reveal delay-500"
+        >
+          <div>
+            <div class="text-2xl font-display font-semibold text-white">
+              Scopus
+            </div>
+            <div class="text-sm text-textMuted mt-1">Indexing Eligibility</div>
+          </div>
+          <div>
+            <div class="text-2xl font-display font-semibold text-white">
+              Taylor &amp; Francis
+            </div>
+            <div class="text-sm text-textMuted mt-1">Book Proceedings</div>
+          </div>
+          <div>
+            <div class="text-2xl font-display font-semibold text-white">
+              100+
+            </div>
+            <div class="text-sm text-textMuted mt-1">Research Papers</div>
+          </div>
+          <div>
+            <div class="text-2xl font-display font-semibold text-white">
+              Hybrid
+            </div>
+            <div class="text-sm text-textMuted mt-1">
+              Physical &amp; Virtual
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About & Publications -->
+    <section id="about" class="py-24 border-t border-border bg-surface/30">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+          <div class="reveal">
+            <h2
+              class="text-3xl font-display font-semibold text-white mb-6 tracking-tight"
+            >
+              About the Conference
+            </h2>
+            <p class="text-textMuted mb-6 leading-relaxed">
+              ICRAME 2026 is a global forum bringing together researchers,
+              academicians, innovators, and industry experts to discuss
+              cutting-edge developments across engineering disciplines.
+            </p>
+            <p class="text-textMuted mb-8 leading-relaxed">
+              The conference promotes cross-domain collaboration, emphasizing
+              the convergence of Computer Science, Electrical Engineering,
+              Mechanical Engineering, Civil Engineering, and Artificial
+              Intelligence in Agriculture.
+            </p>
+
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <div
+                  class="mt-1 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0"
+                >
+                  <i data-lucide="check" class="w-3 h-3"></i>
+                </div>
+                <span class="text-sm text-textMuted">
+                  Proceedings published with
+                  <span class="text-white">
+                    Taylor &amp; Francis (Routledge)
+                  </span>
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div
+                  class="mt-1 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0"
+                >
+                  <i data-lucide="check" class="w-3 h-3"></i>
+                </div>
+                <span class="text-sm text-textMuted">
+                  Double-blind peer review with mandatory Turnitin check
+                  (&lt;15%)
+                </span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div
+                  class="mt-1 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0"
+                >
+                  <i data-lucide="check" class="w-3 h-3"></i>
+                </div>
+                <span class="text-sm text-textMuted">
+                  Post-conference webinars and global visibility programs
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="relative group reveal delay-200">
+            <div
+              class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-500"
+            ></div>
+            <div
+              class="relative bg-surface border border-border p-8 rounded-2xl h-full flex flex-col justify-center"
+            >
+              <div class="flex justify-between items-start mb-8">
+                <span
+                  class="px-3 py-1 rounded-full bg-white/5 text-xs text-white border border-white/10"
+                >
+                  Proceedings Partner
+                </span>
+                <i
+                  data-lucide="book-open"
+                  class="w-6 h-6 text-white"
+                  stroke-width="1.5"
+                ></i>
+              </div>
+              <h3 class="text-3xl font-display font-semibold text-white mb-2">
+                Taylor &amp; Francis
+              </h3>
+              <p class="text-lg text-textMuted mb-6">Routledge Imprint</p>
+              <div class="space-y-4 pt-6 border-t border-border">
+                <div
+                  class="flex justify-between items-center text-sm text-textMuted"
+                >
+                  <span>Scopus Indexing Eligibility</span>
+                  <span class="text-secondary flex items-center gap-1">
+                    <i data-lucide="check-circle" class="w-3 h-3"></i>
+                    Confirmed
+                  </span>
+                </div>
+                <div
+                  class="flex justify-between items-center text-sm text-textMuted"
+                >
+                  <span>International Editorial Standards</span>
+                  <span class="text-secondary flex items-center gap-1">
+                    <i data-lucide="check-circle" class="w-3 h-3"></i>
+                    Strict
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tracks -->
+    <section id="tracks" class="py-24">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-12 reveal">
+          <h2
+            class="text-3xl font-display font-semibold text-white mb-4 tracking-tight"
+          >
+            Conference Tracks
+          </h2>
+          <p class="text-textMuted max-w-2xl">
+            Covering five major pillars of multidisciplinary engineering
+            innovation.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Track 1 -->
+          <div
+            class="p-6 rounded-2xl bg-surface border border-border hover:border-primary/50 hover:bg-surfaceHighlight transition-all duration-300 group reveal"
+          >
+            <div
+              class="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition-transform"
+            >
+              <i data-lucide="cpu" class="w-5 h-5" stroke-width="1.5"></i>
+            </div>
+            <h3 class="text-lg font-medium text-white mb-3">
+              Computer Science
+            </h3>
+            <p class="text-sm text-textMuted leading-relaxed">
+              AI, ML, Cloud Computing, IoT, Blockchain, Cybersecurity, Big Data,
+              Software Engineering, Computer Vision.
+            </p>
+          </div>
+
+          <!-- Track 2 -->
+          <div
+            class="p-6 rounded-2xl bg-surface border border-border hover:border-yellow-500/50 hover:bg-surfaceHighlight transition-all duration-300 group reveal delay-100"
+          >
+            <div
+              class="w-10 h-10 rounded-full bg-yellow-500/10 flex items-center justify-center text-yellow-400 mb-6 group-hover:scale-110 transition-transform"
+            >
+              <i data-lucide="zap" class="w-5 h-5" stroke-width="1.5"></i>
+            </div>
+            <h3 class="text-lg font-medium text-white mb-3">
+              Electrical &amp; Electronics
+            </h3>
+            <p class="text-sm text-textMuted leading-relaxed">
+              Smart Grids, Embedded Systems, VLSI, 5G/6G, Power Electronics,
+              Signal Processing.
+            </p>
+          </div>
+
+          <!-- Track 3 -->
+          <div
+            class="p-6 rounded-2xl bg-surface border border-border hover:border-red-500/50 hover:bg-surfaceHighlight transition-all duration-300 group reveal delay-200"
+          >
+            <div
+              class="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 mb-6 group-hover:scale-110 transition-transform"
+            >
+              <i data-lucide="settings" class="w-5 h-5" stroke-width="1.5"></i>
+            </div>
+            <h3 class="text-lg font-medium text-white mb-3">Mechanical Eng.</h3>
+            <p class="text-sm text-textMuted leading-relaxed">
+              Robotics, CAD/CAM, Smart Materials, Mechatronics, Manufacturing
+              Technologies.
+            </p>
+          </div>
+
+          <!-- Track 4 -->
+          <div
+            class="p-6 rounded-2xl bg-surface border border-border hover:border-purple-500/50 hover:bg-surfaceHighlight transition-all duration-300 group reveal"
+          >
+            <div
+              class="w-10 h-10 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-400 mb-6 group-hover:scale-110 transition-transform"
+            >
+              <i data-lucide="building" class="w-5 h-5" stroke-width="1.5"></i>
+            </div>
+            <h3 class="text-lg font-medium text-white mb-3">
+              Civil Engineering
+            </h3>
+            <p class="text-sm text-textMuted leading-relaxed">
+              Smart Cities, Sustainable Structures, GIS, Environmental
+              Engineering, Infrastructure Systems.
+            </p>
+          </div>
+
+          <!-- Track 5 -->
+          <div
+            class="p-6 rounded-2xl bg-surface border border-border hover:border-green-500/50 hover:bg-surfaceHighlight transition-all duration-300 group reveal delay-100"
+          >
+            <div
+              class="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center text-green-400 mb-6 group-hover:scale-110 transition-transform"
+            >
+              <i data-lucide="sprout" class="w-5 h-5" stroke-width="1.5"></i>
+            </div>
+            <h3 class="text-lg font-medium text-white mb-3">
+              AI in Agriculture
+            </h3>
+            <p class="text-sm text-textMuted leading-relaxed">
+              Precision Farming, Drones, Agri-Robotics, Soil &amp; Crop
+              Analytics, Climate Modelling.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Speakers (Redesigned) -->
+    <section
+      id="speakers"
+      class="py-24 border-t border-border bg-surface/30 overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-12 reveal text-center">
+          <span
+            class="text-primary text-xs font-bold tracking-widest uppercase mb-2 block"
+          >
+            Global Experts
+          </span>
+          <h2
+            class="text-3xl font-display font-semibold text-white tracking-tight"
+          >
+            Speakers &amp; Program Advisors
+          </h2>
+        </div>
+        <div
+          class="relative w-full overflow-hidden marquee-mask group reveal delay-100"
+        >
+          <div
+            class="flex w-max animate-[scroll_120s_linear_infinite] group-hover:[animation-play-state:paused] gap-6 px-6"
+          >
+            <!-- Speaker Cards -->
+            <div class="flex gap-6">
+              <!-- Loop 1 -->
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  AL
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) Akhlesh Lakhtakia
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  Penn State University, USA
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  AS
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) Alexander Shalin
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  ITMO University, Russia
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  GK
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) Grzegorz Królczyk
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  Opole University of Technology, Poland
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  JG
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) Jose Arturo Garza-Reyes
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  University of Derby, UK
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  AM
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) Anshumali Mishra
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  University of Oulu, Finland
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  DS
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) Devendra Saroj
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  University of Surrey, UK
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  AV
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) Avimanyu Vatsa
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  Fairleigh Dickinson University, USA
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  HS
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) HS Srivastava
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  Scientist SG, ISRO–IIRS, India
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  DM
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) D.K. Mishra
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  ISRO, Lucknow, India
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  PG
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) P.K. Garg
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  IIT Roorkee, India
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  MT
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) Manoj Tripathi
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  IIT Roorkee, India
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  DS
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) Dharmendra Singh
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  IIT Roorkee, India
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  KS
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) K.P. Singh
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  IIT BHU, India
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  RT
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) Rajneesh Tyagi
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  IIT BHU, India
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  SP
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) S.K. Panda
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  IIT BHU, India
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  AY
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) Avadhesh Yadav
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  NIT Kurukshetra, India
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  VB
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) V.K. Bajpai
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  NIT Kurukshetra, India
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  KS
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) Kamlesh Kumar Singh
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  Amity University, Lucknow
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  OS
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) Omveer Singh
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  GBU, Greater Noida
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  PT
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) Prabhakar Tiwari
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  MMMUT Gorakhpur
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  AT
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) A.N. Tiwari
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  MMMUT Gorakhpur
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  RK
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) R.A. Khan
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">BBAU Lucknow</p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  AK
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) Anil Kumar
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">VIT Bhopal</p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  DK
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) Dilip Kumar JB Saini
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  Dayananda Sagar University
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  AT
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) Anurag Tiwari
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  BBDITM Lucknow
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  KA
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) K.V. Arya
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  IIITM Gwalior
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  AT
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) Aditya Trivedi
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  IIITM Gwalior
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  SJ
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) Siddharth Jain
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">COER Roorkee</p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  AS
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) Ankit Srivastava
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  RML University
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  ND
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) Namrata Dhanda
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  Amity University Lucknow
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 hover:border-primary/40 transition-all hover:bg-surfaceHighlight hover:-translate-y-1 group relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
+                ></div>
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted group-hover:scale-105 transition-transform group-hover:border-primary/30 relative z-10 shadow-lg"
+                >
+                  SS
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) Santosh Kumar Shukla
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  BBDITM Lucknow
+                </p>
+              </div>
+            </div>
+            <!-- Loop 2 -->
+            <div class="flex gap-6">
+              <!-- Duplicates -->
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 group relative overflow-hidden"
+              >
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted"
+                >
+                  AL
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) Akhlesh Lakhtakia
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  Penn State University, USA
+                </p>
+              </div>
+              <div
+                class="w-80 bg-surface border border-border rounded-2xl p-6 flex flex-col items-center text-center shrink-0 group relative overflow-hidden"
+              >
+                <div
+                  class="w-24 h-24 rounded-full bg-surfaceHighlight border-2 border-border mb-5 flex items-center justify-center text-xl font-bold text-textMuted"
+                >
+                  AS
+                </div>
+                <h4
+                  class="text-white font-display font-medium text-lg mb-1 relative z-10"
+                >
+                  Prof. (Dr.) Alexander Shalin
+                </h4>
+                <p class="text-sm text-textMuted relative z-10">
+                  ITMO University, Russia
+                </p>
+              </div>
+              <!-- (Visual buffer for seamless loop, first two are sufficient to show continuity in preview but full list ensures smooth) -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Important Dates -->
+    <section
+      id="dates"
+      class="py-24 border-t border-border relative overflow-hidden"
+    >
+      <div
+        class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl pointer-events-none"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <h2
+          class="text-3xl font-display font-semibold text-white mb-12 tracking-tight"
+        >
+          Timeline
+        </h2>
+
+        <div
+          class="relative border-l border-border ml-3 md:ml-6 space-y-12 reveal"
+        >
+          <!-- Date 1 -->
+          <div class="relative pl-8 md:pl-12">
+            <div
+              class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-border ring-4 ring-background"
+            ></div>
+            <span
+              class="text-xs font-medium text-textMuted uppercase tracking-wider"
+            >
+              Coming Soon
+            </span>
+            <h3 class="text-xl font-medium text-white mt-1">
+              Paper Submission
+            </h3>
+            <p class="text-sm text-textMuted mt-1">
+              Submit full papers for review via the portal.
+            </p>
+          </div>
+
+          <!-- Date 2 -->
+          <div class="relative pl-8 md:pl-12">
+            <div
+              class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-border ring-4 ring-background"
+            ></div>
+            <span
+              class="text-xs font-medium text-textMuted uppercase tracking-wider"
+            >
+              May 2026
+            </span>
+            <h3 class="text-xl font-medium text-white mt-1">
+              Camera-Ready Paper
+            </h3>
+            <p class="text-sm text-textMuted mt-1">
+              Final submission after revisions.
+            </p>
+          </div>
+
+          <!-- Date 3 -->
+          <div class="relative pl-8 md:pl-12">
+            <div
+              class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-primary ring-4 ring-primary/20 shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+            ></div>
+            <span
+              class="text-xs font-bold text-primary uppercase tracking-wider"
+            >
+              March 14-15, 2026
+            </span>
+            <h3 class="text-2xl font-display font-semibold text-white mt-1">
+              Conference Dates
+            </h3>
+            <p class="text-sm text-textMuted mt-1">
+              Maharishi University of Information Technology, Lucknow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration -->
+    <section
+      id="registration"
+      class="py-24 bg-surface/30 border-t border-border"
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-12 text-center reveal">
+          <h2 class="text-3xl font-display font-semibold text-white mb-4">
+            Registration
+          </h2>
+          <p class="text-textMuted">Choose your participation level.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <!-- Card 1 -->
+          <div
+            class="bg-background border border-border p-8 rounded-2xl hover:border-white/20 transition-colors reveal"
+          >
+            <h3 class="text-lg font-medium text-white mb-2">Indian Student</h3>
+            <div class="text-xl font-bold text-textMuted mb-6">UG/PG/PhD</div>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center gap-3 text-sm text-textMuted">
+                <i data-lucide="check" class="w-4 h-4 text-secondary"></i>
+                Presentation Slot
+              </li>
+              <li class="flex items-center gap-3 text-sm text-textMuted">
+                <i data-lucide="check" class="w-4 h-4 text-secondary"></i>
+                Conference Kit
+              </li>
+              <li class="flex items-center gap-3 text-sm text-textMuted">
+                <i data-lucide="check" class="w-4 h-4 text-secondary"></i>
+                Certification
+              </li>
+            </ul>
+            <button
+              class="w-full py-2.5 rounded-lg border border-border text-white text-sm font-medium hover:bg-surface transition-colors"
+            >
+              Details
+            </button>
+          </div>
+
+          <!-- Card 2 (Highlight) -->
+          <div
+            class="bg-gradient-to-b from-surface to-background border border-primary/50 p-8 rounded-2xl relative reveal delay-100"
+          >
+            <div
+              class="absolute top-0 right-0 bg-primary/20 text-primary text-[10px] font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg border-b border-l border-primary/20"
+            >
+              FACULTY
+            </div>
+            <h3 class="text-lg font-medium text-white mb-2">Indian Author</h3>
+            <div class="text-xl font-bold text-white mb-6">Researcher</div>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center gap-3 text-sm text-textMuted">
+                <i data-lucide="check" class="w-4 h-4 text-primary"></i>
+                Scopus Publication
+              </li>
+              <li class="flex items-center gap-3 text-sm text-textMuted">
+                <i data-lucide="check" class="w-4 h-4 text-primary"></i>
+                Full Access
+              </li>
+              <li class="flex items-center gap-3 text-sm text-textMuted">
+                <i data-lucide="check" class="w-4 h-4 text-primary"></i>
+                Networking Lunch
+              </li>
+            </ul>
+            <button
+              class="w-full py-2.5 rounded-lg bg-primary text-white text-sm font-medium hover:bg-blue-600 transition-colors"
+            >
+              Register
+            </button>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-background border border-border p-8 rounded-2xl hover:border-white/20 transition-colors reveal delay-200"
+          >
+            <h3 class="text-lg font-medium text-white mb-2">Foreign Author</h3>
+            <div class="text-xl font-bold text-textMuted mb-6">
+              International
+            </div>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center gap-3 text-sm text-textMuted">
+                <i data-lucide="check" class="w-4 h-4 text-secondary"></i>
+                Hybrid Mode
+              </li>
+              <li class="flex items-center gap-3 text-sm text-textMuted">
+                <i data-lucide="check" class="w-4 h-4 text-secondary"></i>
+                T&amp;F Proceedings
+              </li>
+              <li class="flex items-center gap-3 text-sm text-textMuted">
+                <i data-lucide="check" class="w-4 h-4 text-secondary"></i>
+                Digital Certs
+              </li>
+            </ul>
+            <button
+              class="w-full py-2.5 rounded-lg border border-border text-white text-sm font-medium hover:bg-surface transition-colors"
+            >
+              Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Committee & Venue -->
+    <section id="committee" class="py-24 border-t border-border">
+      <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12">
+        <!-- Committee List -->
+        <div class="reveal">
+          <h2 class="text-2xl font-display font-semibold text-white mb-8">
+            Organizing Committee
+          </h2>
+          <div class="space-y-8">
+            <!-- Chief Patron -->
+            <div class="relative group">
+              <div
+                class="absolute -inset-0.5 bg-gradient-to-r from-yellow-500/20 to-yellow-600/20 rounded-xl blur opacity-50 group-hover:opacity-100 transition-opacity"
+              ></div>
+              <div
+                class="relative bg-surface border border-yellow-500/30 p-6 rounded-xl text-center"
+              >
+                <div
+                  class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2"
+                >
+                  Chief Patron
+                </div>
+                <h3 class="text-white font-medium text-lg">
+                  Shri Ajay Prakash Shrivastava
+                </h3>
+                <p class="text-textMuted text-sm">Hon’ble Chancellor, MUIT</p>
+              </div>
+            </div>
+            <!-- Patrons -->
+            <div>
+              <div
+                class="text-xs font-bold text-textMuted uppercase tracking-widest mb-4 border-l-2 border-primary pl-3"
+              >
+                Patrons
+              </div>
+              <div class="grid gap-4">
+                <div
+                  class="bg-surface/50 border border-border p-4 rounded-lg flex items-center gap-4 hover:border-primary/30 transition-colors"
+                >
+                  <div
+                    class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xs"
+                  >
+                    OS
+                  </div>
+                  <div>
+                    <h4 class="text-white font-medium text-sm">
+                      Prof. (Group Capt.) O.P. Sharma
+                    </h4>
+                    <p class="text-xs text-textMuted">Director General, MUIT</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-surface/50 border border-border p-4 rounded-lg flex items-center gap-4 hover:border-primary/30 transition-colors"
+                >
+                  <div
+                    class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xs"
+                  >
+                    BS
+                  </div>
+                  <div>
+                    <h4 class="text-white font-medium text-sm">
+                      Prof. (Dr.) Bhanu Pratap Singh
+                    </h4>
+                    <p class="text-xs text-textMuted">Vice-Chancellor</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-surface/50 border border-border p-4 rounded-lg flex items-center gap-4 hover:border-primary/30 transition-colors"
+                >
+                  <div
+                    class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xs"
+                  >
+                    GC
+                  </div>
+                  <div>
+                    <h4 class="text-white font-medium text-sm">
+                      Prof. (Dr.) Girish Chhimwal
+                    </h4>
+                    <p class="text-xs text-textMuted">Registrar</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Leadership -->
+            <div>
+              <div
+                class="text-xs font-bold text-textMuted uppercase tracking-widest mb-4 border-l-2 border-secondary pl-3"
+              >
+                Conference Leadership
+              </div>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div class="bg-surface/30 border border-border p-4 rounded-lg">
+                  <p class="text-[10px] uppercase text-textMuted/70 mb-1">
+                    General Chair
+                  </p>
+                  <h4 class="text-white font-medium text-sm">
+                    Prof. (Dr.) Neeraj Jain
+                  </h4>
+                  <p class="text-xs text-textMuted">Dean Academics, MUIT</p>
+                </div>
+                <div class="bg-surface/30 border border-border p-4 rounded-lg">
+                  <p class="text-[10px] uppercase text-textMuted/70 mb-1">
+                    Conference Chair
+                  </p>
+                  <h4 class="text-white font-medium text-sm">
+                    Dr. Kalyan Acharjya
+                  </h4>
+                  <p class="text-xs text-textMuted">Dean, MUIT</p>
+                </div>
+                <div class="bg-surface/30 border border-border p-4 rounded-lg">
+                  <p class="text-[10px] uppercase text-textMuted/70 mb-1">
+                    Convener
+                  </p>
+                  <h4 class="text-white font-medium text-sm">
+                    Dr. Rakesh Kumar Yadav
+                  </h4>
+                  <p class="text-xs text-textMuted">MUIT</p>
+                </div>
+                <div class="bg-surface/30 border border-border p-4 rounded-lg">
+                  <p class="text-[10px] uppercase text-textMuted/70 mb-1">
+                    Co-Convener
+                  </p>
+                  <h4 class="text-white font-medium text-sm">
+                    Dr. Adesh Kumar Mishra
+                  </h4>
+                  <p class="text-xs text-textMuted">MUIT</p>
+                </div>
+              </div>
+            </div>
+            <!-- Secretaries -->
+            <div>
+              <div
+                class="text-xs font-bold text-textMuted uppercase tracking-widest mb-4 border-l-2 border-indigo-500 pl-3"
+              >
+                Organizing Secretaries
+              </div>
+              <div class="flex gap-4">
+                <div
+                  class="bg-surface/30 border border-border px-4 py-3 rounded-lg flex-1 text-center hover:bg-surface/50 transition-colors"
+                >
+                  <h4 class="text-white font-medium text-sm">
+                    Dr. Shweta Singh
+                  </h4>
+                </div>
+                <div
+                  class="bg-surface/30 border border-border px-4 py-3 rounded-lg flex-1 text-center hover:bg-surface/50 transition-colors"
+                >
+                  <h4 class="text-white font-medium text-sm">
+                    Dr. Gouri Shukla
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <!-- Members -->
+            <div class="bg-surface/20 border border-border rounded-xl p-6">
+              <div
+                class="text-xs font-bold text-white uppercase tracking-widest mb-4"
+              >
+                Committee Members
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-textMuted hover:text-white hover:border-white/20 transition-colors"
+                >
+                  Dr. Vaishali Singh
+                </span>
+                <span
+                  class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-textMuted hover:text-white hover:border-white/20 transition-colors"
+                >
+                  Dr. Gaurav Shukla
+                </span>
+                <span
+                  class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-textMuted hover:text-white hover:border-white/20 transition-colors"
+                >
+                  Dr. Pawan Kumar Dixit
+                </span>
+                <span
+                  class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-textMuted hover:text-white hover:border-white/20 transition-colors"
+                >
+                  Dr. Shweta Vikram
+                </span>
+                <span
+                  class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-textMuted hover:text-white hover:border-white/20 transition-colors"
+                >
+                  Dr. Peeyush Kumar Pathak
+                </span>
+                <span
+                  class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-textMuted hover:text-white hover:border-white/20 transition-colors"
+                >
+                  Dr. Kaneez Zainab
+                </span>
+                <span
+                  class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-textMuted hover:text-white hover:border-white/20 transition-colors"
+                >
+                  Dr. Dhanesh Kumar
+                </span>
+                <span
+                  class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-textMuted hover:text-white hover:border-white/20 transition-colors"
+                >
+                  Dr. Madhu Gupta
+                </span>
+                <span
+                  class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-textMuted hover:text-white hover:border-white/20 transition-colors"
+                >
+                  Dr. Vrijesh Kumar Pandey
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Venue & Contact -->
+        <div class="reveal delay-200 flex flex-col h-full" id="venue">
+          <h2 class="text-2xl font-display font-semibold text-white mb-8">
+            Venue &amp; Contact
+          </h2>
+          <div
+            class="flex-1 bg-surface border border-border rounded-xl overflow-hidden flex flex-col"
+          >
+            <!-- Map -->
+            <div
+              class="h-48 relative bg-slate-800 overflow-hidden rounded-t-xl"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.1617156302223!2d80.9279201!3d26.9300873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399956f63b4f2327%3A0xb820bdfd92601785!2sMaharishi%20University%20of%20Information%20Technology%20Lucknow%20Campus!5e0!3m2!1sen!2sin!4v1764136259983!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div class="p-8 flex-1 flex flex-col justify-between" id="contact">
+              <div>
+                <h3 class="text-white font-medium text-lg mb-2">
+                  Maharishi University of Information Technology
+                </h3>
+                <p class="text-textMuted text-sm mb-6">
+                  Sitapur Road, Near IIM Lucknow
+                  <br />
+                  Lucknow – 226013, Uttar Pradesh, India
+                </p>
+              </div>
+
+              <div class="space-y-4 pt-6 border-t border-border">
+                <div class="flex items-center gap-3 text-sm text-textMuted">
+                  <div
+                    class="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary"
+                  >
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase opacity-50">
+                      Lead Editor &amp; Convener
+                    </p>
+                    <a
+                      href="mailto:rakesh.yadav@muit.in"
+                      class="hover:text-white transition-colors"
+                    >
+                      rakesh.yadav@muit.in
+                    </a>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 text-sm text-textMuted">
+                  <div
+                    class="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary"
+                  >
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase opacity-50">
+                      Conference Office
+                    </p>
+                    <span>+91 6396411200 / 0522-2771666</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-border py-12 bg-background">
+      <div
+        class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6"
+      >
+        <div class="flex items-center gap-2">
+          <div
+            class="w-6 h-6 rounded bg-white text-black flex items-center justify-center font-bold text-xs"
+          >
+            IC
+          </div>
+          <span class="text-white font-medium tracking-tight">ICRAME 2026</span>
+        </div>
+
+        <div class="text-sm text-textMuted">
+          © 2026 MUIT Lucknow. All rights reserved.
+        </div>
+
+        <div class="flex gap-6 text-sm text-textMuted">
+          <a href="#" class="hover:text-white transition-colors">
+            Ethics Policy
+          </a>
+          <a href="#" class="hover:text-white transition-colors">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      lucide.createIcons();
+
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 20) {
+          navbar.classList.add("bg-background/80", "shadow-lg");
+          navbar.classList.remove("border-transparent");
+        } else {
+          navbar.classList.remove("bg-background/80", "shadow-lg");
+          navbar.classList.add("border-transparent");
+        }
+      });
+
+      const btn = document.getElementById("mobile-btn");
+      const closeBtn = document.getElementById("mobile-close-btn");
+      const menu = document.getElementById("mobile-menu");
+      const mobileLinks = document.querySelectorAll("[data-mobile-link]");
+      let isMenuOpen = false;
+
+      // Function to open mobile menu
+      function openMobileMenu() {
+        isMenuOpen = true;
+        menu.classList.add("active");
+        document.body.classList.add("menu-open");
+        btn.innerHTML =
+          '<i data-lucide="x" stroke-width="1.5" class="w-6 h-6"></i>';
+        lucide.createIcons();
+      }
+
+      // Function to close mobile menu
+      function closeMobileMenu() {
+        isMenuOpen = false;
+        menu.classList.remove("active");
+        document.body.classList.remove("menu-open");
+        btn.innerHTML =
+          '<i data-lucide="menu" stroke-width="1.5" class="w-6 h-6"></i>';
+        lucide.createIcons();
+      }
+
+      // Toggle menu on button click
+      btn.addEventListener("click", () => {
+        if (isMenuOpen) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+
+      // Close menu on close button click
+      closeBtn.addEventListener("click", closeMobileMenu);
+
+      // Close menu when clicking on any navigation link or CTA
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          // Add a small delay to allow the page to start scrolling before closing
+          setTimeout(closeMobileMenu, 150);
+        });
+      });
+
+      // Close menu when clicking outside the menu container
+      menu.addEventListener("click", (e) => {
+        if (e.target === menu) {
+          closeMobileMenu();
+        }
+      });
+
+      // Close menu on Escape key press
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && isMenuOpen) {
+          closeMobileMenu();
+        }
+      });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+
+      // Theme Toggle Logic
+      const themeToggleBtn = document.getElementById("theme-toggle");
+      const themeToggleMobileBtn = document.getElementById(
+        "theme-toggle-mobile"
+      );
+      const htmlElement = document.documentElement;
+
+      // Check for saved user preference, if any, on load of the website
+      const currentTheme = localStorage.getItem("theme")
+        ? localStorage.getItem("theme")
+        : null;
+
+      if (currentTheme) {
+        if (currentTheme === "light") {
+          htmlElement.classList.add("light-mode");
+          updateToggleIcon(true);
+        }
+      }
+
+      // Function to toggle theme
+      function toggleTheme() {
+        htmlElement.classList.toggle("light-mode");
+
+        let theme = "dark";
+        if (htmlElement.classList.contains("light-mode")) {
+          theme = "light";
+          updateToggleIcon(true);
+        } else {
+          updateToggleIcon(false);
+        }
+        localStorage.setItem("theme", theme);
+      }
+
+      // Desktop theme toggle
+      themeToggleBtn.addEventListener("click", toggleTheme);
+
+      // Mobile theme toggle
+      themeToggleMobileBtn.addEventListener("click", toggleTheme);
+
+      function updateToggleIcon(isLight) {
+        // Update desktop toggle icon
+        if (isLight) {
+          themeToggleBtn.innerHTML =
+            '<i data-lucide="moon" class="w-5 h-5"></i>';
+          themeToggleMobileBtn.innerHTML =
+            '<i data-lucide="moon" class="w-5 h-5"></i><span class="mobile-theme-text">Toggle Theme</span>';
+        } else {
+          themeToggleBtn.innerHTML =
+            '<i data-lucide="sun" class="w-5 h-5"></i>';
+          themeToggleMobileBtn.innerHTML =
+            '<i data-lucide="sun" class="w-5 h-5"></i><span class="mobile-theme-text">Toggle Theme</span>';
+        }
+        lucide.createIcons();
+      }
+
+      // Initialize icon state
+      if (htmlElement.classList.contains("light-mode")) {
+        updateToggleIcon(true);
+      } else {
+        updateToggleIcon(false);
+      }
+    </script>
+  </body>
+</html>
