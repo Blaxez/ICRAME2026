@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://blaxez.github.io/ICRAME2026/sitemap.xml
