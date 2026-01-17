@@ -26,6 +26,13 @@ function openMobileMenu() {
   menu.classList.add("active");
   document.body.classList.add("menu-open");
   btn.innerHTML = '<i data-lucide="x" stroke-width="1.5" class="w-6 h-6"></i>';
+
+  // Hide top banner if present (fixes fullscreen issue on index.html)
+  const topBanner = document.getElementById("top-banner");
+  if (topBanner) {
+    topBanner.style.display = "none";
+  }
+
   lucide.createIcons();
 }
 
@@ -36,6 +43,13 @@ function closeMobileMenu() {
   document.body.classList.remove("menu-open");
   btn.innerHTML =
     '<i data-lucide="menu" stroke-width="1.5" class="w-6 h-6"></i>';
+
+  // Show top banner again if present
+  const topBanner = document.getElementById("top-banner");
+  if (topBanner) {
+    topBanner.style.display = "";
+  }
+
   lucide.createIcons();
 }
 
@@ -88,7 +102,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.1 }
+  { threshold: 0.1 },
 );
 
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
@@ -184,7 +198,7 @@ function switchToConference() {
       "bg-transparent",
       "text-textMuted",
       "border",
-      "border-border"
+      "border-border",
     );
 
     tabUniversity.classList.remove("active", "bg-primary", "text-white");
@@ -192,7 +206,7 @@ function switchToConference() {
       "bg-transparent",
       "text-textMuted",
       "border",
-      "border-border"
+      "border-border",
     );
 
     // Update content visibility
@@ -214,7 +228,7 @@ function switchToUniversity() {
       "bg-transparent",
       "text-textMuted",
       "border",
-      "border-border"
+      "border-border",
     );
 
     tabConference.classList.remove("active", "bg-primary", "text-white");
@@ -222,7 +236,7 @@ function switchToUniversity() {
       "bg-transparent",
       "text-textMuted",
       "border",
-      "border-border"
+      "border-border",
     );
 
     // Update content visibility
@@ -249,7 +263,7 @@ function updateCountdown() {
   if (difference > 0) {
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
     const hours = Math.floor(
-      (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
     );
     const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((difference % (1000 * 60)) / 1000);
