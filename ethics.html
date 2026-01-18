@@ -112,14 +112,18 @@
       >
         <a
           href="index.html"
-          class="font-display font-semibold text-3xl tracking-tightest text-white flex items-center gap-2 relative z-50"
+          class="flex items-center gap-3 relative z-50 group"
         >
           <img src="assets/logo.png" alt="ICRAME Logo" class="h-10 w-auto" />
-          ICRAME
-          <span class="text-primary opacity-80">2026</span>
+          <div
+            class="flex items-center font-display font-semibold text-2xl md:text-3xl text-white"
+          >
+            <span class="tracking-tight">ICRAME</span>
+            <span class="ml-2 text-primary opacity-90">2026</span>
+          </div>
         </a>
 
-        <div class="hidden lg:flex items-center gap-8">
+        <div class="hidden xl:flex items-center gap-5">
           <a
             href="index.html"
             class="text-sm font-medium text-textMuted hover:text-white transition-colors"
@@ -174,14 +178,22 @@
           >
             Guidelines
           </a>
-        </div>
-
-        <div class="hidden lg:flex items-center gap-4">
           <a
             href="contact.html"
-            class="text-xs font-medium text-textMuted hover:text-white uppercase tracking-wider"
+            class="text-sm font-medium text-textMuted hover:text-white transition-colors"
           >
             Contact
+          </a>
+        </div>
+
+        <div class="hidden xl:flex items-center gap-4">
+          <a
+            href="https://cmt3.research.microsoft.com/ICRAME2026/Submission/Manage"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-primary text-white hover:bg-blue-600 text-sm font-medium px-5 py-2.5 rounded-full transition-colors whitespace-nowrap"
+          >
+            Submit Paper
           </a>
           <a
             href="registration.html"
@@ -204,7 +216,7 @@
         <!-- Mobile Menu Button -->
         <button
           id="mobile-btn"
-          class="lg:hidden text-white relative z-50 p-2 hover:bg-white/10 rounded-lg transition-colors"
+          class="xl:hidden text-white relative z-50 p-2 hover:bg-white/10 rounded-lg transition-colors"
           aria-label="Toggle mobile menu"
         >
           <i data-lucide="menu" stroke-width="1.5" class="w-6 h-6"></i>
@@ -315,7 +327,17 @@
             </nav>
 
             <!-- Mobile CTA & Theme Toggle -->
-            <div class="mobile-menu-footer">
+            <div class="mobile-menu-footer space-y-3">
+              <a
+                href="https://cmt3.research.microsoft.com/ICRAME2026/Submission/Manage"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mobile-cta-btn bg-primary text-white border-none"
+                data-mobile-link
+              >
+                <span>Submit Paper</span>
+                <i data-lucide="external-link" class="w-5 h-5"></i>
+              </a>
               <a
                 href="registration.html"
                 class="mobile-cta-btn"
