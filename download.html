@@ -169,44 +169,46 @@
       <div class="container-custom">
         <!-- Page Header -->
         <div class="text-center mb-16">
-          <div
-            class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary mb-6"
-          >
-            <i data-lucide="download" class="w-4 h-4"></i>
-            <span class="text-sm font-medium">Resources</span>
+          <div class="inline-flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full text-primary mb-6 shadow-sm">
+            <i data-lucide="download" class="w-5 h-5"></i>
+            <span class="text-base font-semibold tracking-wide">Resources & Downloads</span>
           </div>
-          <h1
-            class="font-display text-4xl md:text-5xl font-bold mb-6 gradient-text"
-          >
+          <h1 class="font-display text-4xl md:text-5xl font-extrabold mb-4 gradient-text drop-shadow-lg">
             Download Resources
           </h1>
-          <p class="text-lg text-textMuted max-w-2xl mx-auto">
-            Access important documents, templates, and guidelines for ICRAME
-            2026
+          <p class="text-lg text-textMuted max-w-2xl mx-auto font-medium">
+            Access all essential documents, templates, and author guidelines for ICRAME 2026 in one place. Ensure your submission meets all requirements by using the official resources below.
           </p>
+        </div>
+
+        <!-- Section Divider -->
+        <div class="flex items-center justify-center mb-12">
+          <div class="flex-grow border-t border-dashed border-primary/40"></div>
+          <span class="mx-6 text-primary font-semibold tracking-wider uppercase text-sm">Downloadable Resources</span>
+          <div class="flex-grow border-t border-dashed border-primary/40"></div>
         </div>
 
         <!-- Download Cards -->
         <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           <!-- Paper Template -->
           <div
-            class="card-glass p-8 rounded-2xl hover:scale-105 transition-transform"
+            class="card-glass p-8 rounded-2xl shadow-xl bg-surface/80 hover:scale-105 hover:shadow-2xl transition-all duration-300 border border-border/60"
           >
             <div
               class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6"
             >
               <i data-lucide="file-text" class="w-8 h-8 text-primary"></i>
             </div>
-            <h3 class="font-display text-xl font-semibold mb-3">
+            <h3 class="font-display text-xl font-bold mb-3 text-primary">
               Word Sample Template
             </h3>
-            <p class="text-textMuted mb-6">
-              Download the official Word template for manuscript submission
+            <p class="text-textMuted mb-6 font-medium">
+              Download the official Word template for manuscript submission. Ensure your paper follows the required format for review.
             </p>
             <a
               href="assets/pdfs/Word_Sample_template_8.25 x11_2_column.docx"
               download
-              class="btn-primary w-full py-3 rounded-xl inline-flex items-center justify-center gap-2"
+                class="btn-primary w-full py-3 rounded-xl inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 hover:bg-primaryGlow/90 shadow-md hover:shadow-xl"
             >
               <i data-lucide="download" class="w-4 h-4"></i>
               <span>Download DOCX</span>
@@ -215,23 +217,23 @@
 
           <!-- Guidelines for Authors -->
           <div
-            class="card-glass p-8 rounded-2xl hover:scale-105 transition-transform"
+            class="card-glass p-8 rounded-2xl shadow-xl bg-surface/80 hover:scale-105 hover:shadow-2xl transition-all duration-300 border border-border/60"
           >
             <div
               class="w-16 h-16 bg-secondary/10 rounded-xl flex items-center justify-center mb-6"
             >
               <i data-lucide="megaphone" class="w-8 h-8 text-secondary"></i>
             </div>
-            <h3 class="font-display text-xl font-semibold mb-3">
+            <h3 class="font-display text-xl font-bold mb-3 text-secondary">
               Guidelines for Authors
             </h3>
-            <p class="text-textMuted mb-6">
-              View the complete guidelines for paper submission and formatting
+            <p class="text-textMuted mb-6 font-medium">
+              View the comprehensive guidelines for paper submission, formatting, and important instructions for authors.
             </p>
             <a
               href="assets/pdfs/Guidelines for Authors.docx"
               download
-              class="btn-secondary w-full py-3 rounded-xl inline-flex items-center justify-center gap-2"
+                class="btn-secondary w-full py-3 rounded-xl inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 hover:bg-secondary/80 shadow-md hover:shadow-xl"
             >
               <i data-lucide="download" class="w-4 h-4"></i>
               <span>Download DOCX</span>
@@ -240,23 +242,23 @@
 
           <!-- Copyright Form -->
           <div
-            class="card-glass p-8 rounded-2xl hover:scale-105 transition-transform"
+            class="card-glass p-8 rounded-2xl shadow-xl bg-surface/80 hover:scale-105 hover:shadow-2xl transition-all duration-300 border border-border/60"
           >
             <div
               class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6"
             >
               <i data-lucide="book-open" class="w-8 h-8 text-primary"></i>
             </div>
-            <h3 class="font-display text-xl font-semibold mb-3">
+            <h3 class="font-display text-xl font-bold mb-3 text-primary">
               Copyright Form
             </h3>
-            <p class="text-textMuted mb-6">
-              Download the copyright form required for contributors
+            <p class="text-textMuted mb-6 font-medium">
+              Download and complete the copyright form. This is mandatory for all contributors submitting papers to ICRAME 2026.
             </p>
             <a
               href="assets/pdfs/Copyright form for contributors.pdf"
               target="_blank"
-              class="btn-primary w-full py-3 rounded-xl inline-flex items-center justify-center gap-2"
+                class="btn-primary w-full py-3 rounded-xl inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 hover:bg-primaryGlow/90 shadow-md hover:shadow-xl"
             >
               <i data-lucide="download" class="w-4 h-4"></i>
               <span>Download PDF</span>
@@ -299,6 +301,21 @@
       mobileMenuButton.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
       });
+      </script>
+      <style>
+        /* Custom bounce animation for download icons on hover */
+        .animate-bounce-on-hover {
+          transition: transform 0.2s;
+        }
+        a:hover .animate-bounce-on-hover {
+          animation: bounce 0.5s;
+        }
+        @keyframes bounce {
+          0%, 100% { transform: translateY(0); }
+          30% { transform: translateY(-8px); }
+          60% { transform: translateY(4px); }
+        }
+      </style>
 
       // Close mobile menu when clicking on a link
       mobileMenu.querySelectorAll("a").forEach((link) => {

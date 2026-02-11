@@ -28,6 +28,7 @@
           <a href="index.html" class="nav-link text-sm font-medium transition-colors">Home</a>
           <a href="about.html" class="nav-link text-sm font-medium transition-colors">About</a>
           <a href="tracks.html" class="nav-link text-sm font-medium transition-colors">Tracks</a>
+          <a href="download.html" class="nav-link text-sm font-medium transition-colors">Download</a>
           <a href="speakers.html" class="nav-link text-sm font-medium transition-colors">Speakers</a>
           <a href="committee.html" class="nav-link text-sm font-medium transition-colors">Committee</a>
           <a href="venue.html" class="nav-link text-sm font-medium transition-colors">Venue</a>
@@ -122,6 +123,10 @@
               </a>
               <a href="committee.html" class="mobile-nav-link" data-mobile-link>
                 <span class="mobile-nav-link-text">Committee</span>
+                <i data-lucide="arrow-right" class="w-5 h-5 mobile-nav-arrow"></i>
+              </a>
+              <a href="download.html" class="mobile-nav-link" data-mobile-link>
+                <span class="mobile-nav-link-text">Download</span>
                 <i data-lucide="arrow-right" class="w-5 h-5 mobile-nav-arrow"></i>
               </a>
               <a href="venue.html" class="mobile-nav-link" data-mobile-link>
@@ -284,11 +289,7 @@
     closeBtn.addEventListener("click", closeMobileMenu);
   }
 
-  mobileLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      setTimeout(closeMobileMenu, 150);
-    });
-  });
+  // ...removed code that closed mobile menu when clicking a link...
 
   if (menu) {
     menu.addEventListener("click", (e) => {
